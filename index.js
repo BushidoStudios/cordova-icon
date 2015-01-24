@@ -50,6 +50,20 @@ var getPlatforms = function (projectName) {
             { name : 'drawable-xxhdpi/icon.png', size : 144 },
         ]
     });
+    platforms.push({
+        name : 'windows',
+        iconsPath : 'platforms/windows/images',
+        isAdded : fs.existsSync('platforms/windows'),
+        icons : [
+            { name : 'drawable/icon.png',       size : 96 },
+            { name : 'drawable-hdpi/icon.png',  size : 72 },
+            { name : 'drawable-ldpi/icon.png',  size : 36 },
+            { name : 'drawable-mdpi/icon.png',  size : 48 },
+            { name : 'drawable-xhdpi/icon.png', size : 96 },
+            { name : 'drawable-xxhdpi/icon.png', size : 144 },
+        ]
+    });
+    
     // TODO: add all platforms
     deferred.resolve(platforms);
     return deferred.promise;
